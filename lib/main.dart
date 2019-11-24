@@ -18,6 +18,33 @@ class MyApp extends StatelessWidget {
       body: Center(
         child: Text("Hello, world!!"),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Drawer Header'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('item 1'),
+              onTap: () {
+                print("item 1 selected");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('item 2'),
+              onTap: () {
+                print("item 2 selected");
+                Navigator.pop(context);
+              },
+            )
+          ],
+        ),
+      ),
     );
   }
 }
